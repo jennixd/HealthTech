@@ -1,0 +1,36 @@
+/* Media Queries */
+@media (max-width: 768px) {
+    .first-section {
+        flex-direction: column;
+        padding: 60px 30px;
+        background-image: none;
+        color: #000;
+    }
+
+    .left-section,
+    .right-section {
+        flex: auto;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .mobile-only {
+        display: block; 
+        max-width: 100%;
+        height: auto;
+    }
+
+    .quick-access-section .btn {
+        margin-bottom: 15px;
+    }
+}
+
+
+
+/* Hide on screens larger than 768px width */
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+}
+

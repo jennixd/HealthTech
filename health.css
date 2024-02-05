@@ -1,0 +1,273 @@
+html {
+    scroll-behavior: smooth;
+
+}
+a {
+    text-decoration: none;
+}
+body {
+    padding-top: 100px; 
+    background-color: #EAE8F5;
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+}
+/*div{
+    border: solid red;
+}*/
+body.fixed-nav {
+    padding-top: 100px; 
+}
+
+.navbar-brand img {
+    width: 250px;
+    height: auto;
+}
+
+.navbar-center {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-container {
+    width: 100%;
+}
+
+.navbar-brand {
+    margin-right: auto;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav a.nav-link:hover,
+.navbar-nav .dropdown-menu a.dropdown-item:hover {
+    color: #D17995 !important;
+}
+
+/* First Section */
+.first-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 150px;
+    position: relative;
+}
+
+.left-section {
+    flex: 1;
+}
+
+.left-section h1 {
+    font-size: 2rem;
+    color: #D17995;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.left-section p {
+    font-size: 1.2rem;
+    color: #555;
+    padding-top: 10px;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.first-section hr {
+    width: 100%;
+    border: 1px solid #D17995;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.custom-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: #B8C2F6;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.custom-btn:hover {
+    background-color: #768DEB;
+}
+
+.custom-btn img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.custom-btn span {
+    font-size: 14px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the gap between buttons as needed */
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+/* Fifth Section - Health Screening Availability */
+.fifth-section {
+    padding: 70px 60px;
+    background-color: #f8f9fa;
+    border-radius: 50px;
+}
+
+.fifth-section h2 {
+    font-size: 2rem;
+    color: #D17995;
+}
+
+.fifth-section h3 {
+    text-align: left;
+    padding-top: 70px;
+}
+
+.fifth-section hr {
+    width: 50%;
+    border: 1px solid #D17995;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fifth-section p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: left;
+}
+
+.fifth-section .row {
+    justify-content: center;
+}
+
+.fifth-section .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.fifth-section .col-md-6 .btn {
+    margin-bottom: 15px;
+}
+
+.fifth-section .col-md-6 .custom-btn-quick-access {
+    width: 200px;
+    height: 200px;
+    background-color: #EFDADF;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.fifth-section .col-md-6 .custom-btn-quick-access img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.fifth-section .col-md-6 .custom-btn-quick-access span {
+    font-size: 16px;
+    display: block;
+}
+
+.fifth-section .col-md-6.mb-4 {
+    padding-left: 70px; 
+    padding-right: 70px;
+}
+
+.fifth-section .col-md-6 hr {
+    width: 100%;
+    border: 1px solid #D17995;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    
+}
+
+.fifth-section .col-md-6 .custom-btn-quick-access:hover {
+    background-color: #CE97AB; 
+    color: white; 
+}
+
+/* Footer Styles */
+.footer-section {
+    background-color: white;
+    color: #8AA2D4;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-section h4{
+    color: #D17995;
+}
+
+.footer-logo {
+    width: 150px;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #8AA2D4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #3d51a5;
+}
+
+.footer-credit {
+    font-size: 14px;
+    text-align: right;
+}
+
+#openChatBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
+

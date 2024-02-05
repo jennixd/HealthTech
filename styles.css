@@ -1,7 +1,10 @@
 html {
     scroll-behavior: smooth;
-}
 
+}
+a {
+    text-decoration: none;
+}
 body {
     padding-top: 100px; 
     background-color: #EAE8F5;
@@ -51,6 +54,14 @@ body.fixed-nav {
     background-image: url('assets/Wallpaper/bkgd.jpg');
     background-size: cover; 
     background-position: center;
+    position: relative;
+}
+
+.section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
     position: relative;
 }
 
@@ -116,7 +127,7 @@ body.fixed-nav {
     margin-bottom: 10px;
 }
 
-.custom-btn span {
+.custom-btn a {
     font-size: 14px;
 }
 
@@ -326,7 +337,7 @@ body.fixed-nav {
 
 .fifth-section h3 {
     text-align: left;
-    padding-top: 40px;
+    padding-top: 70px;
 }
 
 .fifth-section hr {
@@ -359,8 +370,8 @@ body.fixed-nav {
 }
 
 .fifth-section .col-md-6 .custom-btn-quick-access {
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 200px;
     background-color: #EFDADF;
     color: black;
     border: none;
@@ -392,39 +403,61 @@ body.fixed-nav {
     
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .first-section {
-        flex-direction: column;
-        padding: 60px 30px;
-        background-image: none;
-        color: #000;
-    }
-
-    .left-section,
-    .right-section {
-        flex: auto;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .mobile-only {
-        display: block; 
-        max-width: 100%;
-        height: auto;
-    }
-
-    .quick-access-section .btn {
-        margin-bottom: 15px;
-    }
+.fifth-section .col-md-6 .custom-btn-quick-access:hover {
+    background-color: #CE97AB; 
+    color: white; 
 }
 
+/* Footer Styles */
+.footer-section {
+    background-color: white;
+    color: #8AA2D4;
+    padding: 30px 0;
+    margin-top: 50px;
+}
 
+.footer-section h4{
+    color: #D17995;
+}
 
-/* Hide on screens larger than 768px width */
-@media (min-width: 768px) {
-    .mobile-only {
-        display: none;
-    }
+.footer-logo {
+    width: 150px;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #8AA2D4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #3d51a5;
+}
+
+.footer-credit {
+    font-size: 14px;
+    text-align: right;
+}
+
+#openChatBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
 }
 
