@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health</title>
+    <title>Covid</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- External CSS -->
@@ -82,37 +82,9 @@
     </div>
 </nav>
 
-<!-- First Section for Health Page -->
-<section class="container-fluid first-section">
-    <div class="row">
-        <!-- Left Section with Buttons -->
-        <div class="col-lg-6 left-section">
-            <!-- Text and Tagline -->
-            <h1>Explore Health Services</h1>
-            <hr>
-            <p>"Empower Your Well-being: Elevate Your Life with Regular Health Check-ups."</p>
-            <!-- Buttons with Custom Icons and Text -->
-            <div class="buttons-container">
-                <a href="latesthealthnews.html" class="custom-btn">
-                    <img src="assets/icons/latest health news.png" alt="Icon 1">
-                    <span>Latest Health News</span>
-                </a>
-                <a href="healthscreening.html" class="custom-btn">
-                    <img src="assets/icons/health screening.png" alt="Icon 2">
-                    <span>Health Screening Programme</span>
-                </a>
-                <a href="#" class="custom-btn">
-                    <img src="assets/icons/health support.png" alt="Icon 3">
-                    <span>Health Support</span>
-                </a>
-            </div>
-        </div>
-        <!-- Right Section with 3D Image -->
-        <div class="col-lg-6 right-section">
-            <img src="assets/3D_assets/health.png" alt="Health 3D Image" style="width: 100%;">
-        </div>
-    </div>
-</section>
+
+<!--PUT UR TRACKER HERE-->>
+
 
 <!-- Footer Section -->
 <footer class="footer-section" style="background-color: white; color: #8AA2D4;">
@@ -196,6 +168,37 @@
 
 <!-- JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        fetchData();
+    });
 
+    async function fetchData() {
+        try {
+            const response = await fetch('https://disease.sh/v3/covid-19/countries/Singapore');
+            const data = await response.json();
+
+            displayData(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    function displayData(data) {
+        const container = document.getElementById('data-container');
+        container.innerHTML = `
+            <p>Total Cases: ${formatNumber(data.cases)}</p>
+            <p>Total Deaths: ${formatNumber(data.deaths)}</p>
+            <p>Total Recovered: ${formatNumber(data.recovered)}</p>
+            <p>Today's Cases: ${formatNumber(data.todayCases)}</p>
+            <p>Today's Deaths: ${formatNumber(data.todayDeaths)}</p>
+            <p>Active Cases: ${formatNumber(data.active)}</p>
+        `;
+    }
+
+    function formatNumber(number) {
+        return number.toLocaleString();
+    }
+</script>
 </body>
 </html>

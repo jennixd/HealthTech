@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health</title>
+    <title>HealthTech</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- External CSS -->
-    <link rel="stylesheet" type="text/css" href="health.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="mobile.css">
     <link rel="stylesheet" type="text/css" href="chat.css">
     <!-- jQuery library -->
@@ -18,7 +18,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .high-pressure-container{
+            padding:0px 100px 0px 100px;
+        }
+        .fifth-section h3{
+            padding-top: 10px;
+            text-align: center;
+        }
+        .fifth-section p{
+            text-align: center;
+        }
+        .fifth-section hr{
+            margin-bottom: 30px;
+        }
+        .appointment-section {
+            padding: 0px;
+            margin-bottom: 50px;
+        }
+        
+        #bookAppointmentBtn {
+            border-radius: 50px;
+            padding: 10px 50px;
+            background-color: #b8c2f6;
+            border: none;
+        }
 
+        #bookAppointmentBtn img{
+            width: 50px;
+        }
+
+        .high-pressure-container img{
+            border-radius: 40px;
+            width: 800px;
+        }
+    </style>
 </head>
 <body>
 
@@ -82,34 +116,40 @@
     </div>
 </nav>
 
-<!-- First Section for Health Page -->
-<section class="container-fluid first-section">
-    <div class="row">
-        <!-- Left Section with Buttons -->
-        <div class="col-lg-6 left-section">
-            <!-- Text and Tagline -->
-            <h1>Explore Health Services</h1>
-            <hr>
-            <p>"Empower Your Well-being: Elevate Your Life with Regular Health Check-ups."</p>
-            <!-- Buttons with Custom Icons and Text -->
-            <div class="buttons-container">
-                <a href="latesthealthnews.html" class="custom-btn">
-                    <img src="assets/icons/latest health news.png" alt="Icon 1">
-                    <span>Latest Health News</span>
-                </a>
-                <a href="healthscreening.html" class="custom-btn">
-                    <img src="assets/icons/health screening.png" alt="Icon 2">
-                    <span>Health Screening Programme</span>
-                </a>
-                <a href="#" class="custom-btn">
-                    <img src="assets/icons/health support.png" alt="Icon 3">
-                    <span>Health Support</span>
+<!-- Fifth Section -->
+<section class="container fifth-section mt-5 text-center">
+    <h2 class="text-center mb-4">High Blood Pressure</h2>
+    <hr>
+    <div class="container-fluid appointment-section">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a href="bookappointment.html">
+                    <button class="btn btn-primary btn-lg" id="bookAppointmentBtn">
+                        <img src="assets/icons/book appointment.png" alt="book appointment icon">
+                        Book an Appointment
+                    </button>
                 </a>
             </div>
         </div>
-        <!-- Right Section with 3D Image -->
-        <div class="col-lg-6 right-section">
-            <img src="assets/3D_assets/health.png" alt="Health 3D Image" style="width: 100%;">
+    </div>
+    <div class="high-pressure-container">
+        <!-- Image -->
+        <div class="col-md-12 mb-4">
+            <img src="assets/images/Blood-Pressure-Chart.jpg" alt="book appointment icon" class="img-fluid">
+        </div>
+        <!-- Content for High Blood Pressure -->
+        <div class="col-md-12 mb-4">
+            <h3>Screening for high blood pressure</h3>
+            <hr>
+            <p>You have high blood pressure or hypertension if your diastolic blood pressure is at 90 mmHg (millimetres of mercury) or higher or your systolic blood pressure is at 140 mmHg or higher. Diastolic pressure is the blood pressure when the heart relaxes and systolic pressure is the blood pressure when the heart is contracting (pumping).</p>
+            <br>
+            <p>High blood pressure sometimes goes unnoticed until complications like heart and kidney failure set in. These complications can often be prevented with early detection and treatment.</p>
+            <h3>Should you be screened for high blood pressure?</h3>
+            <hr>
+            <p>If you are 40 years or older, you should check your blood pressure at least once a year.</p>
+            <h3>Screening for high blood pressure</h3>
+            <hr>
+            <p>You can ask your doctor to check your blood pressure or learn to check it yourself with an electronic blood pressure meter.</p>
         </div>
     </div>
 </section>

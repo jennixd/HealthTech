@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Health News</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="health.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="stylesheet" type="text/css" href="chat.css">
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .health-news-image {
+            border-radius: 30px; 
+            overflow: hidden;
+            width: 100%;
+        }
+        .first-section {
+            padding-bottom: 0px;
+        }
+        
+        .right-section {
+            margin-left: 80px;
+        }
+        .small-text {
+            font-size: 12px;
+        }
+        
+        .article-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .new-section {
+            margin-bottom: 40px;
+            padding: 0px 150px;
+        }
+        
+        .new-section p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center fixed-top">
+    <div class="container navbar-container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets\Logo\logo-withText-coloured.png" alt="Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="navbarNavList">
+                <!-- Dropdown for Health -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="healthDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Health
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="healthDropdown">
+                        <li><a class="dropdown-item" href="latesthealthnews.html">Latest Health News</a></li>
+                        <li><a class="dropdown-item" href="healthscreening.html">Health Screening Programme</a></li>
+                    </ul>
+                </li>
+                <!-- Dropdown for COVID -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="covidDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        COVID
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="covidDropdown">
+                        <li><a class="dropdown-item" href="covidhotspot.html">COVID Hotspot</a></li>
+                        <li><a class="dropdown-item" href="#">COVID Awareness</a></li>
+                        <li><a class="dropdown-item" href="#">COVID Prevention Tips</a></li>
+                        <li><a class="dropdown-item" href="vaccinationinfo.html">Vaccination Information</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bookappointment.html">Book Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reportcase.html">COVID Report Cases</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forum.html">Health Forum</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item" id="newUsernameNavItem" data-bs-toggle="modal" data-bs-target="#pointsModal" class="btn btn-primary fixed-bottom fixed-right fixed-bottom-chat">
+                        <img src="assets/icons/points.png" alt="profile" style="width: 50px; height: 50px;">
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+ <!-- First Section for Latest Health News Page -->
+ <section class="container-fluid first-section">
+    <div class="row">
+        <!-- Left Section with Content -->
+        <div class="col-lg-6 left-section">
+            <!-- Title and Content -->
+            <h1>Latest Health News</h1>
+            <hr>
+            <!-- Sample News Article -->
+            <div class="news-article">
+                <h3>Community Health Champions recognized for Promoting well-being in Singapore.</h3>
+                <p class="article-info">
+                    <span class="small-text">Date Posted: February 10, 2024</span>
+                    <span class="small-text">Writer: Healthier SG</span>
+                </p>
+                <p>In a significant event, the Sihat Bersama JKJU celebration brought together leaders, community partners, and members to champion the physical and mental well-being of the Malay/Muslim community.</p>
+            </div>
+        </div>
+        <!-- Right Section with Image -->
+        <div class="col-lg-6 right-section">
+            <!-- Image related to health news -->
+            <img class="health-news-image" src="assets/images/healthnews.png" alt="Health News Image" style="width: 100%;">
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid new-section">
+    <div class="row">
+        <div class="col-lg-12">
+            <p>The Jaga Kesihatan, Jaga Ummah (JKJU) network, introduced by the Health Promotion Board (HPB) in 2017, has seen remarkable growth, expanding from five mosques to 100 active partners, including Malay Activity Executive Committees and various organizations. The network has played a crucial role in engaging over 40,000 Malay/Muslim residents in healthy lifestyle activities, underscoring the collective dedication to fostering healthier habits.</p>
+            <p>The commitment to community health is further emphasized through the newly established focus area on community health under M3, led by SPS Rahayu. The focus areas include supporting healthy aging, improving screening rates, adopting a healthy lifestyle, reducing smoking prevalence, and enhancing mental well-being.</p>
+            <p>In recognition of outstanding contributions, 99 recipients, including M3@Towns, mosques, MAECs, and individuals, were honored for actively promoting and making healthy living accessible for the broader Malay/Muslim community. This marked a significant increase from the previous JKJU event in 2022, showcasing the growing engagement in adopting healthier lifestyles.</p>
+            <p>Notable initiatives, such as the Saham Kesihatan programme named Gaya Sihat by M3@Marsiling-Yew Tee, exemplify the collaborative efforts to enhance ground-up initiatives. The programme, featuring weekly physical activities and collaborations with healthcare institutions and religious centers, highlights the potential of tapping into available resources.</p>
+            <p>The event emphasized the importance of a community-wide effort, leveraging close working relationships and the spirit of Gotong Royong (working together). Leaders encouraged small changes in daily lives, such as brisk walks and healthier food choices, to instill healthier habits.</p>
+            <p>In conclusion, the celebration not only honored exemplary efforts but also aimed to inspire a broader adoption of healthy living as a way of life for the Malay/Muslim community in Singapore. The event concluded with heartfelt congratulations to all recipients and a call to continue making health a top priority.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section" style="background-color: white; color: #8AA2D4;">
+    <div class="container">
+        <div class="row">
+            <!-- Links Section -->
+            <div class="col-md-8">
+                <div class="row">
+                    <!-- About Section -->
+                    <div class="col-md-4">
+                        <h4>About</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="contactus.html">HealthTech Support</a></li>
+                        </ul>
+                    </div>
+                    <!-- Health Section -->
+                    <div class="col-md-4">
+                        <h4>Health</h4>
+                        <ul class="footer-links">
+                            <li><a href="#book-appointment">Book Appointment</a></li>
+                            <li><a href="#covid-report-cases">Covid Report Cases</a></li>
+                            <li><a href="#health-forum">Health Forum</a></li>
+                            <li><a href="#latest-health-news">Latest Health News</a></li>
+                            <li><a href="#health-screening-programme">Health Screening Programme</a></li>
+                        </ul>
+                    </div>
+                    <!-- Covid Section -->
+                    <div class="col-md-4">
+                        <h4>Covid</h4>
+                        <ul class="footer-links">
+                            <li><a href="#covid-hotspot">Covid Hotspot</a></li>
+                            <li><a href="#covid-awareness">Covid Awareness</a></li>
+                            <li><a href="#covid-prevention-tips">Covid Prevention Tips</a></li>
+                            <li><a href="#vaccination-information">Vaccination Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Credits Section -->
+            <div class="col-md-4 text-right">
+                <img src="assets\Logo\logo-withText-coloured.png" alt="Logo" class="footer-logo">
+                <p class="footer-credit">© 2024 HealthTech. Integrated Project</p>
+                <p class="footer-credit">Designed by Hui Hui and Jennifer, Diploma in Immersive Media</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Support Chat Button -->
+<button type="button" class="btn btn-primary fixed-bottom fixed-right fixed-bottom-chat" data-bs-toggle="modal" data-bs-target="#supportChatModal">
+    <img src="assets/icons/health support.png" alt="support">
+</button>
+
+<!-- Support Chat Modal -->
+<div class="modal fade" id="supportChatModal" tabindex="-1" aria-labelledby="supportChatModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/icons/doctor.png" alt="doctor">
+                <h5 class="modal-title" id="supportChatModalLabel">HealthTech Support Chat</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Live Chat Container -->
+                <div id="liveChatContainer">
+                    <div id="chatMessages" class="chat-messages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="messageInput" placeholder="Type your message...">
+                        <button id="sendMessageBtn" class="btn" type="button" onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

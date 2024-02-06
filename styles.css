@@ -461,3 +461,16 @@ body.fixed-nav {
     z-index: 2;
 }
 
+#newUsernameNavItem a {
+    padding: 0;
+}
+
+#newUsernameNavItem {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+figcaption {
+    padding-bottom: 30px;
+    text-align: center;
+}

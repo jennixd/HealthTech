@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="stylesheet" type="text/css" href="chat.css">
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        #appointmentForm{
+            padding: 0 15% 5% 15%;
+        }
+        h2{
+            font-size: 2rem;
+            color: #D17995;
+            padding-top: 30px;
+        }
+        hr {
+            width: 50%;
+            border: 1px solid #D17995;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .submit {
+            background-color: #B8C2F6;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 50px 10px 50px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center fixed-top">
+    <div class="container navbar-container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets\Logo\logo-withText-coloured.png" alt="Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" id="navbarNavList">
+                <!-- Dropdown for Health -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="healthDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Health
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="healthDropdown">
+                        <li><a class="dropdown-item" href="latesthealthnews.html">Latest Health News</a></li>
+                        <li><a class="dropdown-item" href="healthscreening.html">Health Screening Programme</a></li>
+                    </ul>
+                </li>
+                <!-- Dropdown for COVID -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="covidDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        COVID
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="covidDropdown">
+                        <li><a class="dropdown-item" href="covidhotspot.html">COVID Hotspot</a></li>
+                        <li><a class="dropdown-item" href="#">COVID Awareness</a></li>
+                        <li><a class="dropdown-item" href="#">COVID Prevention Tips</a></li>
+                        <li><a class="dropdown-item" href="vaccinationinfo.html">Vaccination Information</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bookappointment.html">Book Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reportcase.html">COVID Report Cases</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forum.html">Health Forum</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item" id="newUsernameNavItem" data-bs-toggle="modal" data-bs-target="#pointsModal" class="btn btn-primary fixed-bottom fixed-right fixed-bottom-chat">
+                        <img src="assets/icons/points.png" alt="profile" style="width: 50px; height: 50px;">
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Book Appointment Form -->
+<section class="container mt-5">
+    <h2 class="text-center mb-4">Health Screening Appointment</h2>
+    <hr>
+    <form id="appointmentForm">
+        <!-- Personal Information -->
+        <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" required>
+        </div>
+        <div class="mb-3">
+            <label for="ic" class="form-label">IC Number</label>
+            <input type="text" class="form-control" id="ic" name="ic" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+        </div>
+
+        <!-- Appointment Category -->
+        <div class="mb-3">
+            <label for="appointmentCategory" class="form-label">Appointment Category</label>
+            <select class="form-select" id="appointmentCategory" name="appointmentCategory" required>
+                <option value="general">General Check-up</option>
+                <option value="blood">Blood Test</option>
+                <option value="diabetes">Diabetes</option>
+                <option value="highbloodpressure">High Blood Pressure</option>
+                <option value="highbloodcholesterol">High Blood Cholesterol</option>
+                <option value="cervicalcancer">Cervical Cancer</option>
+                <option value="breastcancer">Breast Cancer</option>
+            </select>
+        </div>
+
+        <!-- Appointment Date and Time -->
+        <div class="mb-3">
+            <label for="appointmentDate" class="form-label">Appointment Date</label>
+            <input type="date" class="form-control" id="appointmentDate" name="appointmentDate" required>
+        </div>
+        <div class="mb-3">
+            <label for="appointmentTime" class="form-label">Appointment Time</label>
+            <input type="time" class="form-control" id="appointmentTime" name="appointmentTime" required>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="mb-3">
+            <label for="additionalInformation" class="form-label">Additional Information</label>
+            <textarea class="form-control" id="additionalInformation" name="additionalInformation" rows="3"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="button" class="submit btn btn-primary mx-auto d-block" onclick="submitAppointment()">Submit Appointment</button>
+    </form>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="footer-section" style="background-color: white; color: #8AA2D4;">
+    <div class="container">
+        <div class="row">
+            <!-- Links Section -->
+            <div class="col-md-8">
+                <div class="row">
+                    <!-- About Section -->
+                    <div class="col-md-4">
+                        <h4>About</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="contactus.html">HealthTech Support</a></li>
+                        </ul>
+                    </div>
+                    <!-- Health Section -->
+                    <div class="col-md-4">
+                        <h4>Health</h4>
+                        <ul class="footer-links">
+                            <li><a href="#book-appointment">Book Appointment</a></li>
+                            <li><a href="#covid-report-cases">Covid Report Cases</a></li>
+                            <li><a href="#health-forum">Health Forum</a></li>
+                            <li><a href="#latest-health-news">Latest Health News</a></li>
+                            <li><a href="#health-screening-programme">Health Screening Programme</a></li>
+                        </ul>
+                    </div>
+                    <!-- Covid Section -->
+                    <div class="col-md-4">
+                        <h4>Covid</h4>
+                        <ul class="footer-links">
+                            <li><a href="#covid-hotspot">Covid Hotspot</a></li>
+                            <li><a href="#covid-awareness">Covid Awareness</a></li>
+                            <li><a href="#covid-prevention-tips">Covid Prevention Tips</a></li>
+                            <li><a href="#vaccination-information">Vaccination Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Credits Section -->
+            <div class="col-md-4 text-right">
+                <img src="assets\Logo\logo-withText-coloured.png" alt="Logo" class="footer-logo">
+                <p class="footer-credit">© 2024 HealthTech. Integrated Project</p>
+                <p class="footer-credit">Designed by Hui Hui and Jennifer, Diploma in Immersive Media</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Support Chat Button -->
+<button type="button" class="btn btn-primary fixed-bottom fixed-right fixed-bottom-chat" data-bs-toggle="modal" data-bs-target="#supportChatModal">
+    <img src="assets/icons/health support.png" alt="support">
+</button>
+
+<!-- Support Chat Modal -->
+<div class="modal fade" id="supportChatModal" tabindex="-1" aria-labelledby="supportChatModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/icons/doctor.png" alt="doctor">
+                <h5 class="modal-title" id="supportChatModalLabel">HealthTech Support Chat</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Live Chat Container -->
+                <div id="liveChatContainer">
+                    <div id="chatMessages" class="chat-messages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="messageInput" placeholder="Type your message...">
+                        <button id="sendMessageBtn" class="btn" type="button" onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

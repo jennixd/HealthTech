@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health</title>
+    <title>HealthTech</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- External CSS -->
-    <link rel="stylesheet" type="text/css" href="health.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="mobile.css">
     <link rel="stylesheet" type="text/css" href="chat.css">
     <!-- jQuery library -->
@@ -18,7 +18,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+    <style>
+        .circle-container {
+            width: 250px;
+            height: 250px;
+            background-color: #B8C2F6;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #EAE8F5;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            font-weight: bold;
+            padding: 50px 0;
+            color: #D17995;
+        }
+        .btn-primary{
+            margin-top: 30px;
+        }
+        .btn-primary, .btn-success {
+            background-color: #D17995;
+            border: none;
+            border-radius: 500px;
+            padding: 15px 100px;
+        }
+        .btn-primary:hover {
+            background-color: #d65e84;
+            border: none;
+        }
+        .btn-success:hover {
+            background-color: #d65e84;
+            border: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -82,37 +119,60 @@
     </div>
 </nav>
 
-<!-- First Section for Health Page -->
-<section class="container-fluid first-section">
-    <div class="row">
-        <!-- Left Section with Buttons -->
-        <div class="col-lg-6 left-section">
-            <!-- Text and Tagline -->
-            <h1>Explore Health Services</h1>
-            <hr>
-            <p>"Empower Your Well-being: Elevate Your Life with Regular Health Check-ups."</p>
-            <!-- Buttons with Custom Icons and Text -->
-            <div class="buttons-container">
-                <a href="latesthealthnews.html" class="custom-btn">
-                    <img src="assets/icons/latest health news.png" alt="Icon 1">
-                    <span>Latest Health News</span>
-                </a>
-                <a href="healthscreening.html" class="custom-btn">
-                    <img src="assets/icons/health screening.png" alt="Icon 2">
-                    <span>Health Screening Programme</span>
-                </a>
-                <a href="#" class="custom-btn">
-                    <img src="assets/icons/health support.png" alt="Icon 3">
-                    <span>Health Support</span>
-                </a>
-            </div>
-        </div>
-        <!-- Right Section with 3D Image -->
-        <div class="col-lg-6 right-section">
-            <img src="assets/3D_assets/health.png" alt="Health 3D Image" style="width: 100%;">
+<!-- Points Indicator -->
+<div class="container">
+    <h1 class="text-center">My Points</h1>
+    <div class="circle-container">
+        <span id="totalPoints">200<br>Points</span>
+    </div>
+</div>
+
+<!-- View Profile Button -->
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <button class="btn btn-primary">View Profile</button>
         </div>
     </div>
-</section>
+</div>
+
+<!-- Get Free Point Button -->
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <button class="btn btn-success">Get Free Point</button>
+        </div>
+    </div>
+</div>
+
+<!-- Voucher Section -->
+<div class="container mt-5">
+    <h2 class="text-center">Vouchers</h2>
+    <div class="row justify-content-center mt-3">
+        <!-- Voucher 1 -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">50% Off Health Checkup</h5>
+                    <p class="card-text">Points Needed: <span class="points-needed">1000</span></p>
+                    <button class="btn btn-primary">Redeem</button>
+                </div>
+            </div>
+        </div>
+        <!-- Voucher 2 -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Free Covid Screening</h5>
+                    <p class="card-text">Points Needed: <span class="points-needed">200</span></p>
+                    <button class="btn btn-primary">Redeem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <!-- Footer Section -->
 <footer class="footer-section" style="background-color: white; color: #8AA2D4;">
@@ -192,6 +252,54 @@
     </div>
 </div>
 
+<!-- Points Modal -->
+<div class="modal fade" id="pointsModal" tabindex="-1" aria-labelledby="pointsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/icons/points.png" alt="points" width="40px">
+                <h5 class="modal-title" id="pointsModalLabel">Your Points</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Pick the correct answer and earn 100 points.</p>
+                <!-- Daily Quiz Content -->
+                <h5>Daily Quiz</h5>
+                <p>It contains sugar, you should not eat too much of this.</p>
+                <div class="row">
+                    <!-- First Column -->
+                    <div class="col-md-6">
+                        <label>
+                            <input type="radio" name="quizOption" value="Sweets">
+                            <img src="assets/Quiz_Images/sweets.jpg" alt="Sweets" width="100px">
+                            <figcaption>Sweets</figcaption>
+                        </label><br>
+                        <label>
+                            <input type="radio" name="quizOption" value="Strawberry">
+                            <img src="assets/Quiz_Images/strawberry.jpg" alt="Strawberry" width="100px">
+                            <figcaption>Strawberry</figcaption>
+                        </label><br>
+                    </div>
+                    <!-- Second Column -->
+                    <div class="col-md-6">
+                        <label>
+                            <input type="radio" name="quizOption" value="Fried Chicken">
+                            <img src="assets/Quiz_Images/friedchicken.jpeg" alt="Fried Chicken" width="100px">
+                            <figcaption>Fried Chicken</figcaption>
+                        </label><br>
+                        <label>
+                            <input type="radio" name="quizOption" value="Butter">
+                            <img src="assets/Quiz_Images/butter.jpg" alt="Butter" width="100px">
+                            <figcaption>Butter</figcaption>
+                        </label><br>
+                    </div>
+                </div>
+                <!-- Submit Button -->
+                <button type="button" class="btn btn-primary" onclick="submitQuiz()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!-- JavaScript -->
