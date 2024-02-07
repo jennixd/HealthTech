@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Covid Datas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      body{
+        height: 100vh;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      body:after{
+        position: absolute;
+        content: "";
+        background-image: url('bkgd.jpg');
+        width: 100%;
+        height: 50%;
+        top: 0;
+      }
+      body:before{
+        position: absolute;
+        content: "";
+        background: #fff;
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+      }
+      .container {
+        z-index: 1;
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 24px;
+        background: #F6F5F0;
+        padding: 5%;
+        box-shadow: 0px 10px 6px -8px rgba(0,0,0,0.75);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .board {
+        column-count: 3;
+        column-gap: 0;
+      }
+      .container h2 {
+        margin: 0 0 30px;
+        text-align: center;
+      }
+      .card {
+        width: 80%;
+        background: #ccc;
+        padding: 8%;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        color: #fff;
+        word-wrap: break-word;
+      }
+
+      .card.ca {
+        background: #EF7089;
+      }
+      .card.d {
+        background: #8AA2D4;
+      }
+      .card.t {
+        background: #B8C2F6;
+      }
+      .card h5 {
+        margin: 0;
+        font-size: 1rem;
+      }
+      .card span {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+      }
+      .card i {
+        font-size: 3rem;
+      }
+      @media screen and (max-width: 768px){
+        .board {
+          column-count: 2;
+        }
+        .card span {
+          font-size: 2.5rem;
+        }
+      }
+      @media screen and (max-width: 500px){
+        .board {
+          column-count: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player id="loading" src="https://lottie.host/0271772c-cbc9-42d7-a504-a960a583d6f0/JyCCqwAq0C.json" speed="1" style="width: 300px; height: 300px;z-index: 999;" loop autoplay direction="1" mode="normal"></lottie-player>
+
+    <div id="loaded" class="container" style="display:none">
+      <h2>COVID -19 Cases in <span id="country"></span></h2>
+      <h2>Total Population : <span id="population"></span></h2>
+      <p>Last Updated on : <span id="updated"></span></p>
+      <div class="board">
+        <div class="card ca"><i class="fa fa-th-list"></i><h5>Total Cases</h5><span id="cases"></span></div>
+        <div class="card d"><i class="fa fa-times"></i><h5>Total Deaths</h5><span id="death"></span></div>
+        <div class="card t"><i class="fa fa-eye"></i><h5>Total Tests Done</h5><span id="tests"></span></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      async function fetchData() {
+        const url = 'https://covid-193.p.rapidapi.com/statistics?country=Singapore';
+        const options = {
+          method: 'GET',
+          headers: {
+            'X-RapidAPI-Key': '65d77adcd3msh7deac1c0b3521f4p1a78c2jsn6f157e5d05a3',
+            'X-RapidAPI-Host': 'covid-193.p.rapidapi.com'
+          }
+        };
+
+        try {
+          const response = await fetch(url, options);
+          const result = await response.json(); // Parse response as JSON
+          //console.log(result); // Log the entire JSON response
+
+          // Extract specific data
+            const country = result.response[0].country;
+            const day = result.response[0].day;
+            const population = result.response[0].population;
+            const totalCases = result.response[0].cases.total;
+            const deaths = result.response[0].deaths.total;
+            const tests = result.response[0].tests.total;
+
+          // Display the result in HTML
+          document.getElementById("country").innerHTML = country;
+          document.getElementById("cases").innerHTML = totalCases.toLocaleString();
+          document.getElementById("death").innerHTML = deaths.toLocaleString();
+          document.getElementById("tests").innerHTML = tests.toLocaleString();
+          document.getElementById("updated").innerHTML = day.toLocaleString();
+          document.getElementById("population").innerHTML = population.toLocaleString();
+          document.getElementById("loading").style.display = "none";
+          document.getElementById("loaded").style.display = "block";
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      // Call the async function
+      fetchData();
+    </script>
+  </body>
+</html>

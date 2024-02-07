@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
@@ -18,7 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Internal CSS for additional styles -->
     <style>
+        /* Custom styles for About Us section */
         .about-us{
             padding: 0px 100px;
         }
@@ -26,59 +29,60 @@
             font-weight: bold;
             color: #D17995;
         }
-
+        
         hr {
             width: 50%;
             border: 1px solid #D17995;
             margin: 40px auto 70px;
         }
-
+        /* Section 1 styles */
         #section1aboutus h2 {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 20px;
         }
-
+        
         #section1aboutus p {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 60px;
         }
-
+        
+        /* Dotted line style */
         .dotted-line {
             border-top: 1px dotted #999;
             width: 80%;
             margin: 20px auto;
         }
-
-        /* Section 2 and 3 */
+        
+        /* Section 2 and 3 styles */
         #section2ourmission,
         #section3brandidentity {
             padding: 50px 0;
         }
-
-        /* Section 2 and 3 - Heading and Paragraph */
+        
+        /* Heading and paragraph styles for Section 2 and 3 */
         #section2ourmission h2,
         #section3brandidentity h2 {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 20px;
         }
-
+        
         #section2ourmission p,
         #section3brandidentity p {
             font-size: 18px;
             line-height: 1.6;
         }
-
-        /* Section 2 and 3 - Images */
+        
+        /* Images styles for Section 2 and 3 */
         #section2ourmission img,
         #section3brandidentity img {
             max-width: 70%;
             height: auto;
             border-radius: 20px;
         }
-
+        
         /* Responsive adjustments */
         @media (max-width: 768px) {
             /* Common styles */
@@ -99,12 +103,12 @@
             #section3brandidentity {
                 padding: 0;
             }
-
+            
             #section2ourmission .col-md-6,
             #section3brandidentity .col-md-6 {
                 text-align: center;
             }
-
+            
             #section2ourmission h2,
             #section3brandidentity h2 {
                 font-size: 20px;
@@ -116,21 +120,24 @@
                 padding: 0 25px;
             }
         }
-
+    
     </style>
 </head>
 <body>
 
-<!-- Navigation Bar -->
+    <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center fixed-top">
+    <!-- Container for navigation elements -->
     <div class="container navbar-container">
+        <!-- Brand/logo -->
         <a class="navbar-brand" href="index.html">
             <img src="assets\Logo\logo-withText-coloured.png" alt="Logo">
         </a>
-
+        <!-- Toggler/collapsible button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav" id="navbarNavList">
                 <!-- Dropdown for Health -->
@@ -155,6 +162,7 @@
                         <li><a class="dropdown-item" href="vaccinationinfo.html">Vaccination Information</a></li>
                     </ul>
                 </li>
+                <!-- Other navigation links -->
                 <li class="nav-item">
                     <a class="nav-link" href="bookappointment.html">Book Appointment</a>
                 </li>
@@ -171,7 +179,7 @@
                     <a class="nav-link" href="forum.html">Health Forum</a>
                 </li>
             </ul>
-
+            <!-- Right-aligned navbar links -->
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item" id="newUsernameNavItem" data-bs-toggle="modal" data-bs-target="#pointsModal" class="btn btn-primary fixed-bottom fixed-right fixed-bottom-chat">
                         <img src="assets/icons/points.png" alt="profile" style="width: 50px; height: 50px;">

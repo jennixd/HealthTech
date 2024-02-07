@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid</title>
@@ -18,12 +19,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
     <style>
+        /* CSS for the Sketchfab iframe */
         .sketchfab-iframe {
             width: 100%; 
             height: 60vh; 
         }
         
+        /* Responsive styles */
         @media (max-width: 768px) {
             .sketchfab-iframe {
                 height: 40vh;
@@ -47,13 +51,17 @@
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-center fixed-top">
     <div class="container navbar-container">
+        <!-- Logo -->
         <a class="navbar-brand" href="index.html">
             <img src="assets\Logo\logo-withText-coloured.png" alt="Logo">
         </a>
 
+        <!-- Navbar Toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
+        <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav" id="navbarNavList">
                 <!-- Dropdown for Health -->
@@ -78,6 +86,7 @@
                         <li><a class="dropdown-item" href="vaccinationinfo.html">Vaccination Information</a></li>
                     </ul>
                 </li>
+                <!-- Other Navbar Links -->
                 <li class="nav-item">
                     <a class="nav-link" href="bookappointment.html">Book Appointment</a>
                 </li>
@@ -95,9 +104,10 @@
                 </li>
             </ul>
 
+            <!-- Points Modal Trigger -->
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item" id="newUsernameNavItem" data-bs-toggle="modal" data-bs-target="#pointsModal" class="btn btn-primary fixed-bottom fixed-right fixed-bottom-chat">
-                        <img src="assets/icons/points.png" alt="profile" style="width: 50px; height: 50px;">
+                    <img src="assets/icons/points.png" alt="profile" style="width: 50px; height: 50px;">
                 </li>
             </ul>
         </div>
@@ -237,6 +247,7 @@
             <!-- Sketchfab Embed -->
             <div class="sketchfab-embed-wrapper">
                 <iframe title="Health Tech Model 1 - Covid" class="sketchfab-iframe" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/e79f452d06e54c39b9740e52b31580cb/embed?autospin=1&autostart=1"></iframe>
+                <!-- Sketchfab Attribution -->
                 <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
                     <a href="https://sketchfab.com/3d-models/health-tech-model-1-covid-e79f452d06e54c39b9740e52b31580cb?utm_medium=embed&utm_campaign=share-popup&utm_content=e79f452d06e54c39b9740e52b31580cb" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Health Tech Model 1 - Covid</a> by
                     <a href="https://sketchfab.com/yuukixchan111?utm_medium=embed&utm_campaign=share-popup&utm_content=e79f452d06e54c39b9740e52b31580cb" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">jenn</a> on
@@ -246,7 +257,6 @@
         </div>
     </div>
 </section>
-
 
 <!-- Footer Section -->
 <footer class="footer-section" style="background-color: white; color: #8AA2D4;">
@@ -291,6 +301,7 @@
             <!-- Credits Section -->
             <div class="col-md-4 text-right">
                 <img src="assets\Logo\logo-withText-coloured.png" alt="Logo" class="footer-logo">
+                <!-- Footer Credits -->
                 <p class="footer-credit">© 2024 HealthTech. Integrated Project</p>
                 <p class="footer-credit">Designed by Hui Hui and Jennifer, Diploma in Immersive Media</p>
             </div>
@@ -325,8 +336,6 @@
         </div>
     </div>
 </div>
-
-
 
 <!-- JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

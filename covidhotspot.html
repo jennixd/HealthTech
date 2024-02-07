@@ -40,6 +40,13 @@
         #result{
             text-align: center;
         }
+        .covid-btn button{
+            background-color: #B8C2F6;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 50px 10px 50px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -108,12 +115,16 @@
     <!-- Main content section -->
     <div class="container mt-5">
         <h1 class="text-center mb-4">COVID-19 Hotspots</h1>
+        <div class="covid-btn text-center">
+            <a href="covidcases.html">
+                <button class="btn btn-primary">Check Covid Cases</button>
+            </a>
+        </div>
+    </div>
         <!-- Covid Hotspot Map-->
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script src="covidhotspot.js"></script>
-        <div id="result"></div>
-    </div>
 </section>
 
 <!-- Footer Section -->

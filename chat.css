@@ -44,6 +44,7 @@
     border-radius: 5px;
 }
 
+/* Differentiate between user and support messages */
 .user-message {
     background-color: #D17995;
     color: white;
@@ -108,5 +109,5 @@
 }
 
 #sendMessageBtn:hover {
-    background-color: #A44D6D; /* Change the color on hover */
+    background-color: #A44D6D;
 }
