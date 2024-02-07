@@ -18,6 +18,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .small-text{
+            font-size: 14px;
+            color: darkgray;
+            font-weight: lighter;
+        }
+        .left-section p{
+            font-size: 16px;
+        }
+        p{
+            color: #555555;
+        }
+        .first-section{
+            padding-bottom:0px;
+            padding-top: 0px;
+        }
+        img{
+            border-radius: 40px;
+        }
+        .first-section:first-of-type {
+            padding-top: 50px;
+        }
+        @media only screen and (max-width: 768px) {
+
+        }
+    </style>
 </head>
 <body>
 
@@ -94,20 +120,22 @@
                 <h3>Community Health Champions recognized for Promoting well-being in Singapore.</h3>
                 <p class="article-info">
                     <span class="small-text">Date Posted: February 10, 2024</span>
+                    <br>
                     <span class="small-text">Writer: Healthier SG</span>
-                </p>
+                </p>        
+                <img class="health-news-image mobile-only" src="assets/images/healthnews.png" alt="Health News Image" style="width: 100%;">
                 <p>In a significant event, the Sihat Bersama JKJU celebration brought together leaders, community partners, and members to champion the physical and mental well-being of the Malay/Muslim community.</p>
             </div>
         </div>
         <!-- Right Section with Image -->
-        <div class="col-lg-6 right-section">
+        <div class="col-lg-6 right-section desktop-only">
             <!-- Image related to health news -->
             <img class="health-news-image" src="assets/images/healthnews.png" alt="Health News Image" style="width: 100%;">
         </div>
     </div>
 </section>
 
-<section class="container-fluid new-section">
+<section class="container-fluid first-section paragraph">
     <div class="row">
         <div class="col-lg-12">
             <p>The Jaga Kesihatan, Jaga Ummah (JKJU) network, introduced by the Health Promotion Board (HPB) in 2017, has seen remarkable growth, expanding from five mosques to 100 active partners, including Malay Activity Executive Committees and various organizations. The network has played a crucial role in engaging over 40,000 Malay/Muslim residents in healthy lifestyle activities, underscoring the collective dedication to fostering healthier habits.</p>
