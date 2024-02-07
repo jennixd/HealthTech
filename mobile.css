@@ -1,35 +1,99 @@
-/* Media Queries */
-@media (max-width: 768px) {
-    .first-section {
-        flex-direction: column;
-        padding: 60px 30px;
-        background-image: none;
-        color: #000;
-    }
+/* CSS for Mobile View */
 
-    .left-section,
-    .right-section {
-        flex: auto;
-        text-align: center;
-        padding: 20px;
-    }
+/* Adjustments for smaller screens */
 
+@media (min-width:768px) {
     .mobile-only {
-        display: block; 
-        max-width: 100%;
-        height: auto;
-    }
-
-    .quick-access-section .btn {
-        margin-bottom: 15px;
+      display:none;
     }
 }
 
-
-
-/* Hide on screens larger than 768px width */
-@media (min-width: 768px) {
-    .mobile-only {
-        display: none;
+@media only screen and (max-width: 768px) {
+    .desktop-only{
+      display:none;
     }
+
+    p{
+      font-size: 16px;
+    }
+    h2{
+      font-weight: bold;
+      color: #D17995;
+
+    }
+
+    .navbar-toggler{
+      margin-right: 10px;
+    }
+    .first-section {
+      padding: 20px 10px;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .buttons-container .col-md-4 {
+      flex: 0 0 50%;
+      max-width: 100%;
+      padding: 5px;
+    }
+  
+    .custom-btn span {
+      font-size: 14px;
+    }
+  
+    .right-section img {
+      width: 100%;
+    }
+
+    .high-pressure-container {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .high-pressure-container img {
+        width: 100%;
+        max-width: 350px; 
+        border-radius: 0;
+    }
+    
+    .right-section {
+        text-align: center;
+    }
+
+    .right-section img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        width: auto;
+        height: auto; 
+    }
+
+    .button-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .custom-btn {
+        margin-bottom: 10px;
+    }
+
+    /*Aboutus*/
+    #section1aboutus{
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    #section2ourmission img, #section3brandidentity img{
+      margin-top: 20px;
+    }
+
+    #section2ourmission hr{
+      margin-bottom: 0px;
+    }
+
+    
 }

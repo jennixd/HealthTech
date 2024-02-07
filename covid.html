@@ -18,7 +18,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+    <style>
+        .sketchfab-iframe {
+            width: 100%; 
+            height: 60vh; 
+        }
+        
+        @media (max-width: 768px) {
+            .sketchfab-iframe {
+                height: 40vh;
+            }
+            section{
+                text-align: center;
+            }
+            h1{
+                padding: 30px;
+                font-weight: bold;
+                color: #D17995;
+            }
+            .row{
+                margin-top: 20px;
+            }
+        }        
+    </style>
 </head>
 <body>
 
@@ -84,7 +106,7 @@
 
 <!-- First Section for COVID Page -->
 <section class="container-fluid first-section">
-    <div class="row">
+    <div class="row desktop-only">
         <!-- Left Section with Buttons -->
         <div class="col-lg-6 left-section">
             <!-- Text and Tagline -->
@@ -141,13 +163,89 @@
                 </div>
             </div>
         </div>
+        
         <!-- Right Section with 3D Image -->
-        <div class="col-lg-6 right-section">
+        <div class="col-lg-6 right-section desktop-only">
             <img src="assets/3D_assets/covid.png" alt="COVID 3D Image" style="width: 100%;">
+        </div>
+    </div>
+    <!--mobile version-->
+    <div class="row mobile-only">
+        <!-- Left Section with Buttons -->
+        <div class="col-12">
+            <!-- Text and Tagline -->
+            <h1>Explore COVID Services</h1>
+            <hr>
+            <p>"Stay Informed and Protected: Access COVID-related Services."</p>
+            <!-- Buttons with Custom Icons and Text -->
+            <div class="buttons-container">
+                <div>
+                    <!-- Button 1 -->
+                    <div class="row">
+                        <a href="covidhotspot.html" class="custom-btn">
+                            <img src="assets/icons/covid hotspots.png" alt="Icon 1">
+                            <span>COVID News</span>
+                        </a>
+                    </div>
+                    <!-- Button 2 -->
+                    <div class="row">
+                        <a href="reportcases.html" class="custom-btn">
+                            <img src="assets/icons/covid report cases.png" alt="Icon 2">
+                            <span>COVID Testing Centers</span>
+                        </a>
+                    </div>
+                    <!-- Button 3 -->
+                    <div class="row">
+                        <a href="#" class="custom-btn">
+                            <img src="assets/icons/covid awareness.png" alt="Icon 3">
+                            <span>COVID Vaccination</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <!-- Button 4 -->
+                    <div class="row">
+                        <a href="#" class="custom-btn">
+                            <img src="assets/icons/covid tips.png" alt="Icon 4">
+                            <span>COVID Resources</span>
+                        </a>
+                    </div>
+                    <!-- Button 5 -->
+                    <div class="row">
+                        <a href="#" class="custom-btn">
+                            <img src="assets/icons/vaccination information.png" alt="Icon 5">
+                            <span>COVID Helpline</span>
+                        </a>
+                    </div>
+                    <!-- Button 6 -->
+                    <div class="row">
+                        <a href="#" class="custom-btn">
+                            <img src="assets/icons/health support.png" alt="Icon 6">
+                            <span>COVID Precautions</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Second Section with Sketchfab Embed -->
+<section class="container-fluid second-section">
+    <div class="row">
+        <div class="col">
+            <!-- Sketchfab Embed -->
+            <div class="sketchfab-embed-wrapper">
+                <iframe title="Health Tech Model 1 - Covid" class="sketchfab-iframe" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/e79f452d06e54c39b9740e52b31580cb/embed?autospin=1&autostart=1"></iframe>
+                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                    <a href="https://sketchfab.com/3d-models/health-tech-model-1-covid-e79f452d06e54c39b9740e52b31580cb?utm_medium=embed&utm_campaign=share-popup&utm_content=e79f452d06e54c39b9740e52b31580cb" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Health Tech Model 1 - Covid</a> by
+                    <a href="https://sketchfab.com/yuukixchan111?utm_medium=embed&utm_campaign=share-popup&utm_content=e79f452d06e54c39b9740e52b31580cb" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">jenn</a> on
+                    <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=e79f452d06e54c39b9740e52b31580cb" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!-- Footer Section -->
