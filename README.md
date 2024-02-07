@@ -15,7 +15,7 @@ Our design process prioritizes creating an intuitive and user-friendly experienc
 - As a user seeking information, I want quick access to recent health news and studies.
 
 ### Design Mockup
-![Health Hub Design Mockup](https://www.figma.com/file/E3z0MvZwKU1vKSUulncVJc/Health-Tech?type=design&node-id=1906-48&mode=design&t=VSldj29YxMmW3Vp9-0)
+![Health Hub Design Mockup](https://www.figma.com/file/E3z0MvZwKU1vKSUulncVJc/Health-Tech?type=design&node-id=2022%3A66&mode=design&t=gsXCJT7IrVPE8xFB-1)
 ## Features
 
 - **Vaccination Locator:** Find nearby vaccination centers effortlessly.
@@ -41,11 +41,12 @@ Our design process prioritizes creating an intuitive and user-friendly experienc
 - **HTML:** Fundamental structure of the app.
 - **CSS:** Styling for a visually appealing user experience.
 - **JavaScript:** Implementation of interactive features.
+- **Bootstrap:** Responsive Website.
 
 ## Testing
 
 1. **Vaccination Locator:**
-   - Click on the "Find Vaccination Centers" link.
+   - Map show location of vaccination centre.
    - Ensure the map displays accurate and up-to-date information.
 
 2. **Health Gamification:**
@@ -54,7 +55,7 @@ Our design process prioritizes creating an intuitive and user-friendly experienc
 
 3. **COVID Tracker:**
    - Input test results and check if they are stored until a negative outcome.
-   - Attempt to submit invalid or duplicate results and ensure appropriate error messages are displayed.
+   - Error messages are displayed when required informations are not filled in.
 
 4. **Quick Health News:**
    - Click on the "Latest Health News" section.

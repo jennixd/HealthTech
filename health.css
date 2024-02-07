@@ -1,23 +1,30 @@
+/* General Styles */
 html {
     scroll-behavior: smooth;
-
 }
+
 a {
     text-decoration: none;
 }
+
 body {
-    padding-top: 100px; 
+    padding-top: 100px; /* Add padding for fixed navigation */
     background-color: #EAE8F5;
     font-family: 'Poppins', sans-serif;
-    margin: 0; 
+    margin: 0; /* Remove default margin */
 }
+
+/* Uncomment to add border to all div elements */
 /*div{
     border: solid red;
 }*/
+
+/* Fixed navigation */
 body.fixed-nav {
-    padding-top: 100px; 
+    padding-top: 100px; /* Add padding for fixed navigation */
 }
 
+/* Navbar Styles */
 .navbar-brand img {
     width: 250px;
     height: auto;
@@ -40,12 +47,13 @@ body.fixed-nav {
     margin-left: auto;
 }
 
+/* Navbar Link Hover Color */
 .navbar-nav a.nav-link:hover,
 .navbar-nav .dropdown-menu a.dropdown-item:hover {
-    color: #D17995 !important;
+    color: #D17995 !important; /* Change link hover color */
 }
 
-/* First Section */
+/* First Section Styles */
 .first-section {
     display: flex;
     justify-content: space-between;
@@ -90,6 +98,7 @@ body.fixed-nav {
     margin-bottom: 15px;
 }
 
+/* Custom Button Styles */
 .custom-btn {
     display: flex;
     flex-direction: column;
@@ -109,7 +118,7 @@ body.fixed-nav {
 }
 
 .custom-btn:hover {
-    background-color: #768DEB;
+    background-color: #768DEB; /* Change button hover color */
 }
 
 .custom-btn img {
@@ -132,8 +141,7 @@ body.fixed-nav {
     margin-left: 0;
 }
 
-
-/* Fifth Section - Health Screening Availability */
+/* Fifth Section Styles */
 .fifth-section {
     padding: 70px 60px;
     background-color: #f8f9fa;
@@ -210,11 +218,10 @@ body.fixed-nav {
     border: 1px solid #D17995;
     margin-top: 35px;
     margin-bottom: 35px;
-    
 }
 
 .fifth-section .col-md-6 .custom-btn-quick-access:hover {
-    background-color: #CE97AB; 
+    background-color: #CE97AB; /* Change button hover color */
     color: white; 
 }
 

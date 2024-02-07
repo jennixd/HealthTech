@@ -2,19 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Covid Datas</title>
+    <title>Covid Data</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External Font Awesome CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- External Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Internal CSS Styles -->
     <style>
+      /* Importing Google Font */
       @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-      body{
+      
+      /* General Styling */
+      body {
         height: 100vh;
         font-family: 'Poppins', sans-serif;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative; /* Added position relative */
       }
-      body:after{
+      body:after {
         position: absolute;
         content: "";
         background-image: url('bkgd.jpg');
@@ -22,7 +30,7 @@
         height: 50%;
         top: 0;
       }
-      body:before{
+      body:before {
         position: absolute;
         content: "";
         background: #fff;
@@ -43,15 +51,14 @@
         align-items: center;
         justify-content: center;
       }
-
+      
+      /* Board Styling */
       .board {
         column-count: 3;
         column-gap: 0;
       }
-      .container h2 {
-        margin: 0 0 30px;
-        text-align: center;
-      }
+      
+      /* Card Styling */
       .card {
         width: 80%;
         background: #ccc;
@@ -61,51 +68,35 @@
         color: #fff;
         word-wrap: break-word;
       }
-
-      .card.ca {
-        background: #EF7089;
-      }
-      .card.d {
-        background: #8AA2D4;
-      }
-      .card.t {
-        background: #B8C2F6;
-      }
-      .card h5 {
-        margin: 0;
-        font-size: 1rem;
-      }
-      .card span {
-        font-size: 3rem;
-        font-weight: 700;
-        letter-spacing: 4px;
-      }
-      .card i {
-        font-size: 3rem;
-      }
+      .card.ca { background: #EF7089; }
+      .card.d { background: #8AA2D4; }
+      .card.t { background: #B8C2F6; }
+      .card h5 { margin: 0; font-size: 1rem; }
+      .card span { font-size: 3rem; font-weight: 700; letter-spacing: 4px; }
+      .card i { font-size: 3rem; }
+      
+      /* Responsive Styling */
       @media screen and (max-width: 768px){
-        .board {
-          column-count: 2;
-        }
-        .card span {
-          font-size: 2.5rem;
-        }
+        .board { column-count: 2; }
+        .card span { font-size: 2.5rem; }
       }
       @media screen and (max-width: 500px){
-        .board {
-          column-count: 1;
-        }
+        .board { column-count: 1; }
       }
     </style>
   </head>
   <body>
-    
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player id="loading" src="https://lottie.host/0271772c-cbc9-42d7-a504-a960a583d6f0/JyCCqwAq0C.json" speed="1" style="width: 300px; height: 300px;z-index: 999;" loop autoplay direction="1" mode="normal"></lottie-player>
+    <!-- Loading Animation -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player id="loading" src="https://lottie.host/0271772c-cbc9-42d7-a504-a960a583d6f0/JyCCqwAq0C.json" speed="1" style="width: 300px; height: 300px;z-index: 999;" loop autoplay direction="1" mode="normal"></lottie-player>
 
+    <!-- Content Container -->
     <div id="loaded" class="container" style="display:none">
-      <h2>COVID -19 Cases in <span id="country"></span></h2>
+      <!-- COVID-19 Data Display -->
+      <h2>COVID-19 Cases in <span id="country"></span></h2>
       <h2>Total Population : <span id="population"></span></h2>
       <p>Last Updated on : <span id="updated"></span></p>
+      <!-- Card Displaying COVID-19 Statistics -->
       <div class="board">
         <div class="card ca"><i class="fa fa-th-list"></i><h5>Total Cases</h5><span id="cases"></span></div>
         <div class="card d"><i class="fa fa-times"></i><h5>Total Deaths</h5><span id="death"></span></div>
@@ -113,6 +104,7 @@
       </div>
     </div>
 
+    <!-- JavaScript to Fetch Data -->
     <script type="text/javascript">
       async function fetchData() {
         const url = 'https://covid-193.p.rapidapi.com/statistics?country=Singapore';
@@ -127,15 +119,14 @@
         try {
           const response = await fetch(url, options);
           const result = await response.json(); // Parse response as JSON
-          //console.log(result); // Log the entire JSON response
 
           // Extract specific data
-            const country = result.response[0].country;
-            const day = result.response[0].day;
-            const population = result.response[0].population;
-            const totalCases = result.response[0].cases.total;
-            const deaths = result.response[0].deaths.total;
-            const tests = result.response[0].tests.total;
+          const country = result.response[0].country;
+          const day = result.response[0].day;
+          const population = result.response[0].population;
+          const totalCases = result.response[0].cases.total;
+          const deaths = result.response[0].deaths.total;
+          const tests = result.response[0].tests.total;
 
           // Display the result in HTML
           document.getElementById("country").innerHTML = country;
@@ -144,6 +135,8 @@
           document.getElementById("tests").innerHTML = tests.toLocaleString();
           document.getElementById("updated").innerHTML = day.toLocaleString();
           document.getElementById("population").innerHTML = population.toLocaleString();
+
+          // Hide loading animation and display content
           document.getElementById("loading").style.display = "none";
           document.getElementById("loaded").style.display = "block";
         } catch (error) {
