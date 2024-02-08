@@ -61,7 +61,14 @@ Our design process prioritizes creating an intuitive and user-friendly experienc
    - Click on the "Latest Health News" section.
    - Confirm that news articles are updated regularly.
 
-## Credits
+### Work Distribution
+
+- **Huihui (Frontend Developer):** Developed the HTML and CSS, utilizing Bootstrap to ensure website responsiveness.
+- **Jennifer (API Developer):** Researched suitable APIs for the website's requirements and implemented JavaScript functionalities.
+
+### GitHub Pages
+
+The HealthTech website is hosted on GitHub Pages. You can access it [here](https://jennixd.github.io/HealthTech/).
 
 ### Content
 - COVID information sourced from reputable health organizations.
